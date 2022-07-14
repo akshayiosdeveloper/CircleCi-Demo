@@ -16,8 +16,8 @@
 		BA7D01DC2875B8C700A22F80 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA7D01DB2875B8C700A22F80 /* Preview Assets.xcassets */; };
 		BA7D01E72875B8D100A22F80 /* MobileWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7D01E62875B8D100A22F80 /* MobileWeatherTests.swift */; };
 		BA7D01F22875B8D100A22F80 /* MobileWeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7D01F12875B8D100A22F80 /* MobileWeatherUITests.swift */; };
-		BA7D02032875B9AD00A22F80 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7D02022875B9AD00A22F80 /* ApiService.swift */; };
 		BA7D02082875BA2C00A22F80 /* ForeCast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7D02072875BA2C00A22F80 /* ForeCast.swift */; };
+		BA7E6FC4288065E300AB5228 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7E6FC3288065E300AB5228 /* APIService.swift */; };
 		BAB4EC18287F19B100D26C38 /* URLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB4EC17287F19B100D26C38 /* URLImageView.swift */; };
 		BAB4EC1E287F19FB00D26C38 /* UrlImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB4EC1D287F19FB00D26C38 /* UrlImageModel.swift */; };
 		BAB4EC24287F1A7A00D26C38 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB4EC23287F1A7A00D26C38 /* ImageCache.swift */; };
@@ -70,8 +70,8 @@
 		BA7D01ED2875B8D100A22F80 /* MobileWeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileWeatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7D01F12875B8D100A22F80 /* MobileWeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileWeatherUITests.swift; sourceTree = "<group>"; };
 		BA7D01F32875B8D100A22F80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BA7D02022875B9AD00A22F80 /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiService.swift; path = ../../ForeCast.playground/Sources/ApiService.swift; sourceTree = "<group>"; };
 		BA7D02072875BA2C00A22F80 /* ForeCast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeCast.swift; sourceTree = "<group>"; };
+		BA7E6FC3288065E300AB5228 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		BAB4EC17287F19B100D26C38 /* URLImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageView.swift; sourceTree = "<group>"; };
 		BAB4EC1D287F19FB00D26C38 /* UrlImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlImageModel.swift; sourceTree = "<group>"; };
 		BAB4EC23287F1A7A00D26C38 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
@@ -136,8 +136,8 @@
 			children = (
 				BA7D01D42875B89400A22F80 /* MobileWeatherApp.swift */,
 				BA7D01D62875B89500A22F80 /* ContentView.swift */,
-				BA7D02022875B9AD00A22F80 /* ApiService.swift */,
 				BA138DE928784432000EEAD8 /* Gecoder.swift */,
+				BA7E6FC3288065E300AB5228 /* APIService.swift */,
 				BA7D02072875BA2C00A22F80 /* ForeCast.swift */,
 				BA7455C2287C11DA006E6E01 /* ForeCastViewModel.swift */,
 				BA706421287D316F00EF9717 /* ForeCastListViewModel.swift */,
@@ -317,9 +317,9 @@
 				BA138DEA28784432000EEAD8 /* Gecoder.swift in Sources */,
 				BA7455C3287C11DA006E6E01 /* ForeCastViewModel.swift in Sources */,
 				BA706422287D316F00EF9717 /* ForeCastListViewModel.swift in Sources */,
+				BA7E6FC4288065E300AB5228 /* APIService.swift in Sources */,
 				BA7D01D52875B89400A22F80 /* MobileWeatherApp.swift in Sources */,
 				BAB4EC18287F19B100D26C38 /* URLImageView.swift in Sources */,
-				BA7D02032875B9AD00A22F80 /* ApiService.swift in Sources */,
 				BAB4EC1E287F19FB00D26C38 /* UrlImageModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

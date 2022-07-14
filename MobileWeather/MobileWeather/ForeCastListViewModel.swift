@@ -38,7 +38,7 @@ class ForeCastListViewModel:ObservableObject {
                 long = longitude
                 let url = "https://api.openweathermap.org/data/2.5/onecall?lat=\(String(describing: lat))&lon=\(String(describing: long))&exclude=current,minutely,hourly,alerts&appid=e65b8da8a136d24966fc9dea5f8560b4"
                 print("-->url\(url)")
-                let apiservice = ApiService.shared
+                let apiservice = APIService.shared
                 
                 apiservice.getJSON(urlString: url, resultType: ForeCast.self,dateDecodingStrategy: .secondsSince1970) { result in
                     switch result {
