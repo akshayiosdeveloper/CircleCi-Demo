@@ -9,8 +9,13 @@ import Foundation
 import CoreLocation
 import SwiftUI
 class ForeCastListViewModel:ObservableObject {
-    
+    struct AppError:Identifiable {
+        let id = UUID().uuidString
+        let errorString:String
+    }
+    var appError:AppError?
     @Published var forecasts:[ForeCastViewModel] = []
+    @Published var isLoading:Bool = false
     @AppStorage("location") var location: String = ""
     @AppStorage("system") var system:Int = 0 {
         didSet {
@@ -26,11 +31,12 @@ class ForeCastListViewModel:ObservableObject {
     }
     
     func getWeatherForecast() {
-        
+        self.isLoading = true
         var lat = 0.0 , long = 0.0
         CLGeocoder().geocodeAddressString(location) { (placemarks, error) in
             if let error = error {
-                print(error)
+                self.isLoading = false
+                self.appError = AppError(errorString: error.localizedDescription)
             }
             if let latitude = placemarks?.first?.location?.coordinate.latitude ,let longitude = placemarks?.first?.location?.coordinate.longitude {
                 print("lat-->\(latitude) , \(longitude)")
@@ -44,6 +50,7 @@ class ForeCastListViewModel:ObservableObject {
                     switch result {
                     case.success(let forecasts):
                         DispatchQueue.main.async {
+                            self.isLoading = false
                             self.forecasts = forecasts.daily.map{ model in
                                 ForeCastViewModel(forecast: model, system: self.system)
                                 //ForeCastViewModel(forecast:$0)
@@ -56,6 +63,8 @@ class ForeCastListViewModel:ObservableObject {
                         break
                     case .failure(let error):
                         print(error)
+                        self.isLoading = false
+                        self.appError = AppError(errorString: error.localizedDescription)
                         break
                     }
                 }
